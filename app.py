@@ -19,11 +19,11 @@ def load_model():
         bnb_4bit_compute_dtype=torch.float16
     )
     base = Qwen2VLForConditionalGeneration.from_pretrained(
-        "Qwen/Qwen2-VL-2B-Instruct",
-        quantization_config=bnb_config,
-        device_map="auto",
-        trust_remote_code=True
-    )
+    "Qwen/Qwen2-VL-2B-Instruct",
+    torch_dtype=torch.float32,
+    device_map="cpu",
+    trust_remote_code=True
+)
     model = PeftModel.from_pretrained(base, "Weights/")
     model.eval()
     processor = AutoProcessor.from_pretrained("Weights/", trust_remote_code=True)
