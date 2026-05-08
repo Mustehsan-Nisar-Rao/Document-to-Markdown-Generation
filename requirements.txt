@@ -1,0 +1,8 @@
+streamlit
+transformers>=4.45.0
+peft>=0.13.0
+bitsandbytes>=0.43.0
+accelerate>=0.34.0
+torch
+Pillow
+qwen-vl-utils
