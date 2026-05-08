@@ -24,9 +24,9 @@ def load_model():
         device_map="auto",
         trust_remote_code=True
     )
-    model = PeftModel.from_pretrained(base, "weights/")
+    model = PeftModel.from_pretrained(base, "Weights/")
     model.eval()
-    processor = AutoProcessor.from_pretrained("weights/", trust_remote_code=True)
+    processor = AutoProcessor.from_pretrained("Weights/", trust_remote_code=True)
     return model, processor
 
 def generate_markdown(model, processor, image):
