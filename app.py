@@ -20,7 +20,7 @@ HF_TOKEN = st.secrets["HF_TOKEN"]
 # Running remotely means we never load the 2B-param model into this app's
 # memory, so it works fine within Streamlit Community Cloud's ~1GB RAM limit.
 API_URL = "https://router.huggingface.co/v1/chat/completions"
-MODEL_ID = "Qwen/Qwen2-VL-2B-Instruct"
+MODEL_ID = "Qwen/Qwen2.5-VL-7B-Instruct"
 
 
 def image_to_data_url(image: Image.Image) -> str:
